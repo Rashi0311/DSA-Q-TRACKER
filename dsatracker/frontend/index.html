@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>DSA Problem Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="mode-toggle">
+    <button id="modeBtn">🌞 Light Mode</button>
+</div>
+
+<div class="app-container">
+    <h1>📘 DSA Problem Tracker</h1>
+
+    <div class="form-container">
+        <input type="text" id="titleInput" placeholder="Problem Title" />
+        <input type="text" id="linkInput" placeholder="Problem Link" />
+        <textarea id="notesInput" placeholder="Notes (optional)"></textarea>
+        <select id="difficultySelect">
+            <option value="Easy">Easy</option>
+            <option value="Medium">Medium</option>
+            <option value="Hard">Hard</option>
+        </select>
+        <button onclick="addProblem()">Add Problem</button>
+    </div>
+
+    <div class="controls">
+        <label>Sort by:</label>
+        <select id="sortSelect" onchange="renderProblems()">
+            <option value="default">Default</option>
+            <option value="title">Title</option>
+            <option value="difficulty">Difficulty</option>
+        </select>
+
+        <label>Show:</label>
+        <select id="filterSelect" onchange="renderProblems()">
+            <option value="all">All</option>
+            <option value="solved">Solved</option>
+            <option value="unsolved">Unsolved</option>
+        </select>
+    </div>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>Link</th>
+            <th>Difficulty</th>
+            <th>Notes</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody id="problemTableBody">
+        <!-- Data will go here -->
+        </tbody>
+    </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

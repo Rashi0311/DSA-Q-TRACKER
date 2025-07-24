@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
+:root {
+  --bg-light: #9fc3d5;       /*dark Cloud Grey */
+  --bg-dark: #1e1e1e;
+  --text-light: #111;
+  --text-dark: #f0f0f0;
+  --box: #cde5f7;            /* Powder Blue */
+  --box-dark: #333;
+
+  --pink: #f4a7b9;
+  --aqua: #a7f4df;
+  --yellow: #f7f49c;
+  --blue: #61a0ff;
+  --shadow: 3px 3px 0 #000;
+}
+
+body {
+  font-family: 'IBM Plex Mono', monospace;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  margin: 0;
+  padding: 16px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.app-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 16px;
+  background: var(--box);
+  box-shadow: var(--shadow);
+  border-radius: 4px;
+}
+
+.dark-mode .app-container {
+  background: var(--box-dark);
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+input,
+select,
+textarea {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  font-size: 0.9rem;
+  padding: 8px;
+  border: 2px solid #000;
+  border-radius: 4px;
+  box-shadow: var(--shadow);
+  background: #fff;
+}
+
+.dark-mode input,
+.dark-mode textarea,
+.dark-mode select {
+  background: #444;
+  color: #fff;
+}
+
+button {
+  font-size: 0.9rem;
+  background: var(--blue);
+  color: white;
+  padding: 8px 16px;
+  border: 2px solid #000;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+
+button:hover {
+  background: var(--pink);
+  transform: scale(1.03);
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 0;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 10px;
+  border: 2px solid #000;
+  background: white;
+  font-size: 0.85rem;
+}
+
+.dark-mode th,
+.dark-mode td {
+  background: #555;
+  color: #fff;
+}
+
+.mode-toggle {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+textarea {
+  height: 90px;
+}
